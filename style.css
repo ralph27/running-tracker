@@ -116,17 +116,14 @@ li {
   font-size: 1.4rem;
   height: 2rem;
   align-self: center;
-
-
 }
 
 #goalWrapper {
+  display: block;
   text-align: left;
   display: flex;
   flex-direction: row;
   margin-top: 2rem;
-  
-  
 }
 
 #goalLabel {
@@ -137,7 +134,7 @@ li {
   align-self: center;
 }
 
-.progressCircleWrapper {
+#progressCircleWrapper {
   display: flex;
   justify-content: center;
   margin-top: 4rem;
@@ -150,7 +147,7 @@ li {
   display: flex;
   justify-content: center;
   align-items: center;
-  
+  margin-right: 3px;
 }
 
 .progressCenter {
@@ -158,4 +155,12 @@ li {
   height: 220px;
   border-radius: 50%;
   background: #1c262f;
+}
+
+#addGoal {
+  border-radius: 0;
+  width: 7rem;
+  height: 3rem;
+  align-content: center;
+  margin-top: 1.1rem;
 }
