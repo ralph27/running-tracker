@@ -114,6 +114,10 @@ li {
   text-align: center;
   font-family: inherit;
   font-size: 1.4rem;
+  height: 2rem;
+  align-self: center;
+
+
 }
 
 #goalWrapper {
@@ -121,6 +125,12 @@ li {
   display: flex;
   flex-direction: row;
   margin-top: 2rem;
+  
+  
+}
+
+#goalLabel {
+  align-content: center;
 }
 
 #goalWrapper label {
@@ -137,7 +147,6 @@ li {
   width: 250px;
   height: 250px;
   border-radius: 50%;
-  /*background: conic-gradient(#70db70 50%, #2d3740 50%);*/
   display: flex;
   justify-content: center;
   align-items: center;
