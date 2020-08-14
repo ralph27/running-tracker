@@ -57,7 +57,7 @@ function calcGoal() {
   let goal = document.querySelector("#goal").innerHTML;
   const totalValue = entries.reduce(reducer).toFixed(1);
   console.log(totalValue);
-  const completedPercent = totalValue / (goal / 100);
+  const completedPercent = totalValue / (goal / 100) + 1;
   console.log(completedPercent);
   const progressCircle = document.querySelector(".progressCircle");
   if (completedPercent > 100) {
@@ -67,11 +67,9 @@ function calcGoal() {
 }
 
 function goalSubmit() {
-   
   let goalEntry = Number(document.querySelector("#goalEntry").value);
   document.querySelector("#goal").innerHTML = goalEntry;
   document.querySelector("#goalWrapper").reset();
-  
 }
 
 function handleGoalSubmit(event2) {
@@ -79,9 +77,9 @@ function handleGoalSubmit(event2) {
   goalSubmit();
 }
 
-
-const form2 = document.querySelector("#goalWrapper").addEventListener("submit", handleGoalSubmit);
-const form = document.querySelector("form").addEventListener("submit", handleSubmit);   
-
-  
- 
+const form2 = document
+  .querySelector("#goalWrapper")
+  .addEventListener("submit", handleGoalSubmit);
+const form = document
+  .querySelector("form")
+  .addEventListener("submit", handleSubmit);
