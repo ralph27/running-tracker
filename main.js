@@ -54,8 +54,7 @@ function handleSubmit(event) {
 }
 
 function calcGoal() {
-  const goal = Number(document.querySelector("#goal").innerHTML);
-  console.log(goal);
+  let goal = document.querySelector("#goal").innerHTML;
   const totalValue = entries.reduce(reducer).toFixed(1);
   console.log(totalValue);
   const completedPercent = totalValue / (goal / 100);
@@ -67,6 +66,22 @@ function calcGoal() {
   progressCircle.style.background = `conic-gradient( #70db70 ${completedPercent}%, #2d3740 ${completedPercent}% 100%)`;
 }
 
-const form = document
-  .querySelector("form")
-  .addEventListener("submit", handleSubmit);
+function goalSubmit() {
+   
+  let goalEntry = Number(document.querySelector("#goalEntry").value);
+  document.querySelector("#goal").innerHTML = goalEntry;
+  document.querySelector("#goalWrapper").reset();
+  
+}
+
+function handleGoalSubmit(event2) {
+  event2.preventDefault();
+  goalSubmit();
+}
+
+
+const form2 = document.querySelector("#goalWrapper").addEventListener("submit", handleGoalSubmit);
+const form = document.querySelector("form").addEventListener("submit", handleSubmit);   
+
+  
+ 
